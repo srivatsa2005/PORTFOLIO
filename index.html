@@ -1,0 +1,2084 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>portfolio</title>
+</head>
+<style>
+  /*! modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
+
+/*
+Document
+========
+*/
+
+/**
+Use a better box model (opinionated).
+*/
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the line height in all browsers.
+3. Prevent adjustments of font size after orientation changes in iOS.
+4. Use a more readable tab size (opinionated).
+*/
+
+html {
+	font-family:
+		system-ui,
+		'Segoe UI',
+		Roboto,
+		Helvetica,
+		Arial,
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji'; /* 1 */
+	line-height: 1.15; /* 2 */
+	-webkit-text-size-adjust: 100%; /* 3 */
+	tab-size: 4; /* 4 */
+}
+
+/*
+Sections
+========
+*/
+
+/**
+Remove the margin in all browsers.
+*/
+
+body {
+	margin: 0;
+}
+
+/*
+Text-level semantics
+====================
+*/
+
+/**
+Add the correct font weight in Chrome and Safari.
+*/
+
+b,
+strong {
+	font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+	font-family:
+		ui-monospace,
+		SFMono-Regular,
+		Consolas,
+		'Liberation Mono',
+		Menlo,
+		monospace; /* 1 */
+	font-size: 1em; /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+
+small {
+	font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+
+/**
+Correct table border color inheritance in Chrome and Safari. (https://issues.chromium.org/issues/40615503, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+
+table {
+	border-color: currentcolor;
+}
+
+/*
+Forms
+=====
+*/
+
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit; /* 1 */
+	font-size: 100%; /* 1 */
+	line-height: 1.15; /* 1 */
+	margin: 0; /* 2 */
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+	-webkit-appearance: button;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+
+legend {
+	padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+	vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+	height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+	-webkit-appearance: textfield; /* 1 */
+	outline-offset: -2px; /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button; /* 1 */
+	font: inherit; /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+	display: list-item;
+}
+
+  .btn{
+    display: inline-block;
+    font-weight: bold;
+    background-color: var(--clr-rose);
+    color: var(--clr-light);
+    padding: 4px 4%;
+    border-radius: 8px;
+    box-shadow: 0px 10px 20px rgba(225, 29, 72, 0.5), 0px 6px 6px rgba(225, 29, 72, 0.5), 0px 0px 100px -10px var(--clr-rose);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-right: 10px;
+    text-decoration: none;
+}
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0px 14px 28px rgba(225, 29, 72, 0.25), 0px 10px 10px rgba(225, 29, 72, 0.22), 0px 0px 120px -10px var(--clr-rose);
+    opacity: 1;
+}
+  /* MAINCOMP */
+:root {
+  --clr-dark: #070a13;
+  --clr-light: #f1f5f9;
+  --clr-slate400: #94a3b8;
+  --clr-slate600: #475569;
+  --clr-slate800: #1e293b;
+  --clr-rose: #e11d48;
+  --clr-indigo: #4f46e5;
+  /* sizes */
+  --size-small: 14px;
+  --size-medium: 16px;
+  --size-large: 18px;
+  --size-2XL: 24px;
+}
+
+* {
+  margin: 0;
+  line-height: 1.5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+}
+body::-webkit-scrollbar {
+  width: 8px;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: var(--clr-rose);
+  outline: 1px solid var(--clr-rose);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+}
+
+button {
+  display: inline-block;
+  padding: 0px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* MAINCOMP */
+
+/* HEADER */
+#head {
+  display: none;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 9999;
+}
+
+.menubar {
+  color: var(--clr-slate400);
+  width: var(--size-2XL);
+  height: var(--size-2XL);
+  display: block;
+  margin-left: 100%;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* HEADER */
+
+/* INFO */
+#maininfo {
+  justify-items: center;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.profile {
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  box-shadow: 0px 1px 100px 1PX rgba(225, 29, 71, 0.105), 1px 10px 50px rgba(225, 29, 71, 0.105), 0px 0px 100px -10px var(--clr-rose);
+  transition: transform 0.3s;
+}
+
+.profile:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+  box-shadow: 0px 1px 100px 1PX rgba(225, 29, 72, 0.5), 1px 10px 50px rgba(225, 29, 72, 0.5), 0px 0px 100px -10px var(--clr-rose);
+}
+
+.hitxt {
+  line-height: 3;
+  color: var(--clr-slate600);
+  font-size: large;
+}
+
+.mytitle {
+  line-height: 1;
+  color: var(--clr-light);
+  font-size: 40px;
+}
+
+.aboutme {
+  margin-top: 10px;
+  color: var(--clr-slate400);
+}
+
+.reach {
+  margin-top: 20px;
+  width: 100px;
+  height: 35px;
+}
+
+/* INFO */
+
+/* ABOUTCOMPONENTS */
+#about {
+  margin-top: 80px;
+  margin-left: 40px;
+  margin-right: 40px;
+  width: fit-content;
+}
+
+.aboutitms {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.abtitle {
+  font-size: 30px;
+}
+
+.abpar {
+  color: var(--clr-slate400);
+  font-size: var(--size-medium);
+  max-width: 90ch;
+}
+
+.splitter {
+  border-color: var(--clr-slate600);
+  width: auto;
+}
+
+.skl {
+  font-size: 25px;
+  color: var(--clr-slate600);
+}
+
+.aboutul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: '\1F44D';
+  position: absolute;
+}
+
+.abtli {
+  color: var(--clr-slate400);
+  font-size: var(--size-large);
+}
+
+.aboutul2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: '\1F44D';
+  margin-left: 280px;
+  position: relative;
+}
+
+.abimg {
+  margin-left: 150px;
+  margin-top: 50px;
+  border-radius: 4px;
+}
+
+/* ABOUTCOMPONENTS */
+
+/* PROJECT ITEMS */
+
+#fesec {
+  margin-left: 20px;
+}
+
+.pname {
+  font-size: 40px;
+}
+
+.fp {
+  font-size: var(--size-small);
+  color: var(--clr-indigo);
+}
+
+.abproj {
+  max-width: 60ch;
+  color: var(--clr-slate400);
+  margin: 16px 0;
+}
+
+.ut {
+  font-size: var(--size-medium);
+}
+
+.skele {
+  color: var(--clr-slate400);
+}
+
+.fpele {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.ptype {
+  color: var(--clr-slate400);
+}
+
+.fpele div {
+  flex: 1;
+  min-width: 10px;
+}
+
+/* PROJECT ITEMS */
+
+/* PROJECT ITEMS PHOTOS SECTION */
+
+.pfphotos {
+  max-width: 385px;
+  max-height: 425px;
+  margin-top: 0px;
+  border-radius: 8px;
+}
+
+.imagewrapper {
+  position: relative;
+
+}
+
+.imagewrapper::after {
+  content: '';
+  background-color: rgba(109, 103, 106, 0.603);
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: background-color 0.3s;
+}
+
+.imagewrapper:hover::after {
+  background-color: rgba(79, 70, 229, 0.08);
+  cursor: pointer;
+}
+
+.imagecontainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  margin-right: 10px;
+}
+
+
+/* PROJECT ITEMS PHOTOS SECTION */
+
+/* PROJECTS SECTION */
+
+/* .pjcontainer{
+  margin-top: 40px;
+} */
+.pjtitle {
+  font-size: 40px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.pjtxt {
+  max-width: 50ch;
+  text-align: center;
+  color: var(--clr-slate400);
+  margin: 1rem 0;
+}
+
+/* PROJECTS SECTION */
+
+/* PROJECT 1 */
+.prjcont1 {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.p1tlt {
+  margin-bottom: 1rem;
+  margin-left: 80px;
+  margin-top: 20px;
+}
+
+.p1img {
+  width: 300px;
+  height: 200px;
+  background-size: cover;
+  border-radius: 4px;
+  position: absolute;
+  margin-left: 330px;
+  margin-top: 40px;
+}
+
+.p1txt1 {
+  color: var(--clr-slate600);
+  text-align: center;
+  max-width: 50ch;
+  font-size: 13px;
+}
+
+.p1txt2 {
+  color: var(--clr-slate400);
+  max-width: 50ch;
+  text-align: center;
+  font-size: 13px;
+}
+
+.projcomp {
+  position: relative;
+}
+
+.webbtn {
+  display: inline-block;
+  font-weight: bold;
+  background-color: var(--clr-rose);
+  color: var(--clr-light);
+  padding: 4px 4%;
+  border-radius: 8px;
+  box-shadow: 0px 10px 20px rgba(225, 29, 72, 0.5), 0px 6px 6px rgba(225, 29, 72, 0.5), 0px 0px 100px -10px var(--clr-rose);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-right: 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.webbtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 14px 28px rgba(225, 29, 72, 0.25), 0px 10px 10px rgba(225, 29, 72, 0.22), 0px 0px 120px -10px var(--clr-rose);
+  opacity: 1;
+}
+
+/* PROJECT 1 */
+/* PROJECT3 */
+.proj3comp {
+  display: flex;
+  margin-left: 10px;
+}
+
+.p3img {
+  width: 300px;
+  height: 200px;
+  background-size: cover;
+  border-radius: 4px;
+  margin-top: 40px;
+}
+
+.p3comp {
+  margin-left: 10px;
+}
+
+.p3tlt {
+  margin-bottom: 1rem;
+  margin-left: 123px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.p3txt1 {
+  color: var(--clr-slate600);
+  max-width: 50ch;
+  text-align: center;
+  font-size: 13px;
+}
+
+.p3txt2 {
+  color: var(--clr-slate400);
+  max-width: 50ch;
+  text-align: center;
+  font-size: 13px;
+}
+
+.p3btn {
+  display: inline-block;
+  font-weight: bold;
+  background-color: var(--clr-rose);
+  color: var(--clr-light);
+  padding: 4px 4%;
+  border-radius: 8px;
+  box-shadow: 0px 10px 20px rgba(225, 29, 72, 0.5), 0px 6px 6px rgba(225, 29, 72, 0.5), 0px 0px 100px -10px var(--clr-rose);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-right: 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-left: 98px;
+  margin-bottom: 20px;
+  width: 130px;
+}
+
+.p3btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 14px 28px rgba(225, 29, 72, 0.25), 0px 10px 10px rgba(225, 29, 72, 0.22), 0px 0px 120px -10px var(--clr-rose);
+  opacity: 1;
+}
+
+/* PROJECT3 */
+
+/* GET IN CONTACT */
+.giccontainer{
+text-align: center;
+margin-top: 80px;
+}
+.gic{
+font-size: 30px;
+}
+.gictxt{
+color: var(--clr-slate600);
+margin-left: 32px;
+max-width: 75ch;
+margin-top: 30px;
+}
+.gicbtn{
+  display: inline-block;
+  font-weight: bold;
+  background-color: var(--clr-rose);
+  color: var(--clr-light);
+  padding: 4px 4%;
+  border-radius: 8px;
+  box-shadow: 0px 10px 20px rgba(225, 29, 72, 0.5), 0px 6px 6px rgba(225, 29, 72, 0.5), 0px 0px 100px -10px var(--clr-rose);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  margin-top: 30px;
+  width: 180px;
+  height: 40px;
+}
+.gicbtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 14px 28px rgba(225, 29, 72, 0.25), 0px 10px 10px rgba(225, 29, 72, 0.22), 0px 0px 120px -10px var(--clr-rose);
+  opacity: 1;
+}
+.name{
+ color: var(--clr-slate600);
+ margin-top: 100px;
+ font-weight: bold;
+  user-select: none;
+}
+/* GET IN CONTACT */
+
+
+
+/* MOBILE NAVIGATION */
+
+.mobilenav{
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ z-index: 999;
+ width: 100%;
+ height: 100%;
+ background-color: var(--clr-dark);
+ display: none;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+}
+.mobilehead{
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.mobilenavlinks{
+  text-decoration: none;
+  color: var(--clr-slate400);
+  font-size: var(--size-medium);
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  transition: color 0.5s;
+}
+.mobilenavlinks:hover{
+  color: var(--clr-rose);
+}
+.mobilesplit{
+  border: 1px solid var(--clr-slate400);
+  width: 40px;
+}
+.mobiledark_light{
+  width: var(--size-large);
+  height: var(--size-large);
+}
+
+/* MOBILE NAVIGATION */
+
+
+
+/* <REPONSIVENESS> */
+@media (min-width: 425px) {
+
+/* HEADER */
+#head {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
+  margin-right: 30px;
+}
+
+#headerlink {
+  color: inherit;
+  text-decoration: none;
+  margin-left: 20px;
+  color: var(--clr-slate400);
+  opacity: 1;
+  font-size: var(--size-small);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+#headerlink:hover {
+  color: var(--clr-rose);
+  cursor: pointer;
+}
+
+#split {
+  border: 1.5px solid var(--clr-slate400);
+  margin-left: 38px;
+  margin-right: 30px;
+}
+
+.dark_light {
+  color: var(--clr-slate400);
+  width: var(--size-large);
+  margin-top: 5px;
+  margin-right: 30px;
+  display: block;
+}
+
+.res_bttn {
+  text-decoration: none;
+  font-size: var(--size-small);
+  display: block;
+  margin-top: 0px;
+  padding: 10px;
+}
+
+.menubar {
+  display: none;
+}
+
+/* HEADER */
+
+  /* INFO */
+  #maininfo {
+    margin-left: 10px;
+  }
+
+  .profile {
+    width: 100px;
+    height: 100px;
+  }
+
+  .aboutme {
+    font-size: 12px;
+  }
+
+  .mytitle {
+    font-size: 30px;
+  }
+
+  /* INFO */
+
+  /* ABOUT COMPONENTS */
+  #about {
+    margin-left: 15px;
+  }
+
+  .abimg {
+    margin-left: 10px;
+  }
+
+  .aboutul2 {
+    margin-left: 170px;
+  }
+
+  .imgwrp {
+    margin: 0 auto;
+  }
+
+  /* ABOUT COMPONENTS */
+
+  /* PROJECT ITEMS */
+
+  #fesec {
+    margin-top: 40px;
+    margin-right: 10px;
+  }
+
+  .pname {
+    font-size: 30px;
+  }
+
+  .fp {
+    font-size: 13px;
+  }
+
+  .abproj {
+    max-width: 40ch;
+  }
+
+  .ptype {
+    color: var(--clr-slate400);
+  }
+
+  /* PROJECT ITEMS */
+
+  /* PROJECTS SECTION */
+  .pjtxt {
+    margin-left: 15px;
+  }
+
+  /* PROJECTS SECTION */
+  /* PROJECT 1 */
+  .prjcont1 {
+    margin-left: 10px;
+    flex-direction: row;
+  }
+
+  .p1tlt {
+    font-size: 15px;
+    margin-left: 135px;
+  }
+
+  .p1img {
+    width: 400px;
+    height: 200px;
+    position: relative;
+    margin-left: 2px;
+  }
+
+  .p1txt1 {
+    margin-left: 40px;
+    max-width: 50ch;
+  }
+
+  .p1txt2 {
+    margin-left: 40px;
+    max-width: 50ch;
+  }
+
+  .webbtn {
+    margin-left: 150px;
+  }
+
+  /* PROJECT 1 */
+  /* PROJECT 2 */
+  .prjcont1 {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .p1tlt2 {
+    margin-bottom: 1rem;
+    margin-left: 80px;
+    margin-top: 20px;
+  }
+
+  .p2img {
+    width: 400px;
+    height: 200px;
+    position: relative;
+    margin-left: 2px;
+  }
+
+  .p2txt1 {
+    color: var(--clr-slate600);
+    text-align: center;
+    max-width: 50ch;
+    font-size: 13px;
+  }
+
+  .p2txt2 {
+    color: var(--clr-slate400);
+    max-width: 50ch;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .projcomp2 {
+    position: absolute;
+  }
+
+  /* PROJECT 2 */
+  /* PROJECT3 */
+  .proj3comp {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .p3img {
+    width: 400px;
+    height: 200px;
+    margin-left: 2px
+  }
+
+  .p3tlt {
+    font-size: 18px;
+    margin-left: 165px;
+  }
+
+  .p3txt1 {
+    margin-left: 40px;
+    max-width: 50ch;
+  }
+
+  .p3txt2 {
+    margin-left: 40px;
+    max-width: 50ch;
+  }
+
+  .p3btn {
+    margin-left: 150px;
+    width: 100px;
+  }
+
+  /* PROJECT3 */
+/* GET IN CONTACT */
+  .gic{
+  font-size: 30px;
+  }
+  .gictxt{
+  color: var(--clr-slate600);
+  margin-left: 13px;
+  max-width: 50ch;
+  margin-top: 30px;
+  }
+  .name{
+    user-select: none;
+  }
+  /* GET IN CONTACT */
+}
+
+@media (min-width: 640px) {
+
+  /* INFO */
+  .profile {
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+  }
+
+  .aboutme {
+    font-size: medium;
+  }
+
+  .mytitle {
+    font-size: 50px;
+  }
+
+  /* INFO */
+
+  /* ABOUT COMPONENTS */
+  .aboutul2 {
+    margin-left: 280px;
+  }
+
+  .abimg {
+    margin-left: 120px;
+  }
+
+  .imgwrp {
+    margin: 0 auto;
+  }
+
+  /* ABOUT COMPONENTS */
+
+  /* PROJECT ITEMS */
+
+
+  .pname {
+    font-size: 35px;
+  }
+
+  .abproj {
+    max-width: 62ch;
+  }
+
+  .skele {
+    font-size: 16px;
+  }
+
+  /* PROJECT ITEMS */
+
+  /* PROJECT ITEMS PHOTOS SECTION */
+
+  .imagecontainer {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  }
+
+  .pfphotos {
+    max-width: 500px;
+    max-height: 640px;
+    margin-top: 0px;
+  }
+
+  .imagecontainer {
+    margin-right: 80px;
+    margin-left: 50px;
+  }
+
+  /* PROJECT ITEMS PHOTOS SECTION */
+
+  /* PROJECTS SECTION */
+  .pjtxt {
+    margin-left: 120px;
+  }
+
+  /* PROJECTS SECTION */
+  /* PROJECTS */
+  .prjcont1 {
+    margin-left: 0px;
+  }
+
+  .p1tlt {
+    margin-left: 85px;
+    font-size: 20px;
+    margin-top: 25px;
+  }
+
+  .p1img {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    margin-left: 330px;
+    margin-top: 40px;
+  }
+
+  .p1txt1 {
+    max-width: 47ch;
+    margin-left: 15px;
+  }
+
+  .p1txt2 {
+    max-width: 47ch;
+    margin-left: 15px;
+  }
+
+  .projcomp {
+    position: relative;
+  }
+
+  .webbtn {
+    margin-left: 110px;
+  }
+
+  /* PROJECTS */
+  /* PROJECT3 */
+  .proj3comp {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+  }
+
+  .p3img {
+    width: 300px;
+    height: 200px;
+  }
+
+  .p3comp {
+    margin-left: 10px;
+  }
+
+  .p3tlt {
+    margin-left: 123px;
+  }
+
+  .p3txt1 {
+    margin-left: 0px
+  }
+
+  .p3txt2 {
+    margin-left: 0px
+  }
+
+  .p3btn {
+    width: 130px;
+    margin-left: 98px;
+  }
+
+  /* PROJECT3 */
+  .giccontainer{
+    text-align: center;
+    margin-top: 80px;
+    }
+    .gic{
+    font-size: 30px;
+    }
+    .gictxt{
+    color: var(--clr-slate600);
+    margin-left: 20px;
+    max-width: 75ch;
+    margin-top: 30px;
+    }
+    .name{
+     color: var(--clr-slate600);
+     margin-top: 100px;
+     font-weight: bold;
+      user-select: none;
+    }
+    /* GET IN CONTACT */
+}
+
+@media (min-width: 768px) {
+
+  /* HEADER */
+  #head {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+    margin-right: 30px;
+  }
+
+  #headerlink {
+    color: inherit;
+    text-decoration: none;
+    margin-left: 20px;
+    color: var(--clr-slate400);
+    opacity: 1;
+    font-size: var(--size-small);
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+
+  #headerlink:hover {
+    color: var(--clr-rose);
+    cursor: pointer;
+  }
+
+  #split {
+    border: 1.5px solid var(--clr-slate400);
+    margin-left: 38px;
+    margin-right: 30px;
+  }
+
+  .dark_light {
+    color: var(--clr-slate400);
+    width: var(--size-large);
+    margin-top: 5px;
+    margin-right: 30px;
+    display: block;
+  }
+
+  .res_bttn {
+    text-decoration: none;
+    font-size: var(--size-small);
+    display: block;
+    margin-top: 0px;
+    padding: 10px;
+  }
+
+  .menubar {
+    display: none;
+  }
+
+  /* HEADER */
+  /* INFO */
+  .profile {
+    width: 110px;
+    height: 110px;
+  }
+
+  .mytitle {
+    font-size: 45px;
+  }
+
+  /* INFO */
+
+  /* ABOUT COMPONENTS */
+
+  .abimg {
+    margin-left: 175px;
+  }
+
+  .abpar {
+    max-width: 65ch;
+  }
+
+  /* ABOUT COMPONENTS */
+
+  /* PROJECT ITEMS */
+
+  .pname {
+    font-size: 38px;
+  }
+
+  /* PROJECT ITEMS */
+  .abproj {
+    max-width: 65ch;
+  }
+
+  /* PROJECT ITEMS PHOTOS SECTION */
+
+  .pfphotos {
+    max-width: 703px;
+    max-height: 640px;
+    margin-top: 0px;
+  }
+
+  .imagecontainer {
+    margin-right: 20px;
+    margin-left: 15px;
+  }
+
+  /* PROJECT ITEMS PHOTOS SECTION */
+
+  /* PROJECTS SECTION */
+  .pjtxt {
+    margin-left: 160px;
+    max-width: 55ch;
+  }
+
+  /* PROJECTS SECTION */
+  /* PROJECTS */
+  .prjcont1 {
+    margin-left: 5px;
+  }
+
+  .p1tlt {
+    margin-left: 82px;
+    font-size: 25px;
+    margin-top: 26px;
+  }
+
+  .p1img {
+    width: 350px;
+    height: 210px;
+    position: absolute;
+    margin-left: 390px;
+    margin-top: 40px;
+  }
+
+  .p1txt1 {
+    max-width: 50ch;
+    margin-left: 15px;
+    font-size: 14px;
+  }
+
+  .p1txt2 {
+    max-width: 50ch;
+    margin-left: 15px;
+    font-size: 14px;
+  }
+
+  .webbtn {
+    margin-left: 122px;
+  }
+
+  /* PROJECTS */
+  /* PROJECT3 */
+  .proj3comp {
+    margin-left: 20px;
+  }
+
+  .p3img {
+    width: 350px;
+    height: 210px;
+  }
+
+  .p3comp {
+    margin-left: 10px;
+  }
+
+  .p3tlt {
+    margin-left: 140px;
+    font-size: 25px;
+    margin-top: 26px;
+  }
+
+  .p3txt1 {
+    max-width: 50ch;
+    margin-left: 15px;
+    font-size: 14px;
+  }
+
+  .p3txt2 {
+    max-width: 50ch;
+    margin-left: 15px;
+    font-size: 14px;
+  }
+
+  .p3btn {
+    margin-left: 126px;
+  }
+
+  /* PROJECT3 */
+  /* PROJECT3 */
+    .gictxt{
+    color: var(--clr-slate600);
+    margin-left: 148px;
+    max-width: 60ch;
+    margin-top: 30px;
+    }
+    .name{
+      user-select: none;
+    }
+    /* GET IN CONTACT */
+    
+}
+
+@media (min-width: 1024px) {
+
+  /* HEADER */
+  #head {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+    margin-right: 30px;
+  }
+
+  #headerlink {
+    font-size: var(--size-small);
+  }
+
+  .dark_light {
+    width: var(--size-large);
+    margin-top: 5px;
+    margin-right: 30px;
+  }
+
+  .res_bttn {
+    font-size: var(--size-small);
+  }
+
+  /* HEADER */
+  /* INFO */
+  .profile {
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+  }
+
+  .aboutme {
+    font-size: large;
+  }
+
+  .hitxt {
+    line-height: 3;
+    color: var(--clr-slate400);
+    font-size: large;
+  }
+
+  .mytitle {
+    line-height: 1;
+    color: var(--clr-light);
+    font-size: 80px;
+  }
+
+  /* INFO */
+
+  /* ABOUT COMPONENTS */
+  #about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 80px;
+  }
+
+  .abimg {
+    width: 450px;
+    height: 450px;
+    margin-left: 50px;
+  }
+
+  .aboutul2 {
+    margin-left: 180px;
+  }
+
+  /* ABOUT COMPONENTS */
+
+  /* PROJECT ITEMS */
+
+  #fesec {
+    margin-top: 80px;
+    margin-left: 80px;
+  }
+
+  .pname {
+    font-size: 50px;
+  }
+
+  .fp {
+    font-size: 17px;
+  }
+
+  .abproj {
+    max-width: 70ch;
+    font-size: 18px;
+  }
+
+  .skele {
+    font-size: 18px;
+  }
+
+  .ptype {
+    font-size: 18px;
+  }
+
+  /* PROJECT ITEMS */
+
+  /* PROJECT ITEMS PHOTOS SECTION */
+
+  .pfphotos {
+    max-width: 850px;
+    max-height: 640px;
+  }
+
+  .imagecontainer {
+    margin-right: 69px;
+  }
+
+  /* PROJECT ITEMS PHOTOS SECTION */
+
+  /* PROJECTS SECTION */
+  .pjtitle {
+    font-size: 37px;
+  }
+
+  .pjtxt {
+    margin-left: 264px;
+    font-size: 18px;
+  }
+
+  /* PROJECTS SECTION */
+  /* PROJECTS */
+  .prjcont1 {
+    margin-left: 5px;
+  }
+
+  .p1tlt {
+    margin-left: 120px;
+    font-size: 30px;
+    margin-top: 26px;
+  }
+
+  .p1img {
+    width: 480px;
+    height: 290px;
+    position: absolute;
+    margin-left: 510px;
+  }
+
+  .p1txt1 {
+    max-width: 55ch;
+    margin-left: 15px;
+    font-size: 17px;
+  }
+
+  .p1txt2 {
+    max-width: 55ch;
+    margin-left: 15px;
+    font-size: 17px;
+  }
+
+  .webbtn {
+    height: 38px;
+    margin-top: 20px;
+    margin-left: 170px;
+  }
+
+  /* PROJECTS */
+  /* PROJECT3 */
+  .proj3comp {
+    margin-left: 21px;
+  }
+
+  .p3img {
+    width: 480px;
+    height: 290px;
+  }
+
+  .p3comp {
+    margin-left: 11px;
+  }
+
+  .p3tlt {
+    margin-left: 186px;
+    font-size: 30px;
+    margin-top: 26px;
+  }
+
+  .p3txt1 {
+    max-width: 55ch;
+    margin-left: 15px;
+    font-size: 17px;
+  }
+
+  .p3txt2 {
+    max-width: 55ch;
+    margin-left: 15px;
+    font-size: 17px;
+  }
+
+  .p3btn {
+    height: 38px;
+    margin-top: 20px;
+    margin-left: 175px;
+    width: 150px;
+  }
+
+  /* PROJECT3 */
+  /* PROJECT3 */
+      /* GET IN CONTACT */
+  .giccontainer{
+    text-align: center;
+    margin-top: 85px;
+    }
+    .gic{
+    font-size: 35px;
+    }
+    .gictxt{
+    color: var(--clr-slate600);
+    margin-left: 260px;
+    max-width: 60ch;
+    margin-top: 30px;
+    font-size: 17px;
+    }
+  .gicbtn{
+    margin-top: 50px;
+  }
+  .name{
+    user-select: none;
+  }
+    /* GET IN CONTACT */
+}
+
+@media (min-width:1440px) {
+
+  /* ABOUT COMPONENTS */
+
+  .abpar {
+    font-size: 17px;
+  }
+
+  .abimg {
+    margin-left: 280px;
+  }
+
+  /* ABOUT COMPONENTS */
+
+  /* PROJECT ITEMS */
+
+  #fesec {
+    margin-top: 100px;
+  }
+
+  .pname {
+    font-size: 60px;
+  }
+
+  .fp {
+    font-size: 22px;
+  }
+
+  .abproj {
+    max-width: 80ch;
+    font-size: 20px;
+  }
+
+  .skele {
+    font-size: 18px;
+  }
+
+  .ptype {
+    font-size: 18px;
+  }
+
+  /* PROJECT ITEMS */
+
+  /* PROJECT ITEMS PHOTOS SECTION */
+
+  .pfphotos {
+    max-width: 619px;
+    max-height: 840px;
+  }
+
+  .imagecontainer {
+    margin-right: 80px;
+  }
+
+  /* PROJECT ITEMS PHOTOS SECTION */
+
+  /* PROJECTS SECTION */
+  .pjtitle {
+    font-size: 50px;
+  }
+
+  .pjtxt {
+    margin-left: 418px;
+    font-size: 22px;
+  }
+
+  /* PROJECTS SECTION */
+  /* PROJECTS */
+  .prjcont1 {
+    margin-left: 5px;
+  }
+
+  .p1tlt {
+    margin-left: 210px;
+    font-size: 38px;
+    margin-top: 28px;
+  }
+
+  .p1img {
+    width: 580px;
+    height: 320px;
+    position: absolute;
+    margin-left: 810px;
+  }
+
+  .p1txt1 {
+    max-width: 60ch;
+    margin-left: 74px;
+    font-size: 20px;
+  }
+
+  .p1txt2 {
+    max-width: 60ch;
+    margin-left: 74px;
+    font-size: 20px;
+  }
+
+  .webbtn {
+    height: 38px;
+    margin-top: 30px;
+    margin-left: 285px;
+  }
+
+  /* PROJECTS */
+  /* PROJECT3 */
+  .proj3comp {
+    margin-left: 80px;
+  }
+
+  .p3img {
+    width: 580px;
+    height: 320px;
+  }
+
+  .p3comp {
+    margin-left: 45px;
+  }
+
+  .p3tlt {
+    margin-left: 300px;
+    font-size: 38px;
+    margin-top: 28px;
+  }
+
+  .p3txt1 {
+    max-width: 60ch;
+    margin-left: 74px;
+    font-size: 20px;
+  }
+
+  .p3txt2 {
+    max-width: 60ch;
+    margin-left: 74px;
+    font-size: 20px;
+  }
+
+  .p3btn {
+    height: 38px;
+    margin-top: 30px;
+    margin-left: 285px;
+    width: 185px;
+  }
+
+  /* PROJECT3 */
+      /* GET IN CONTACT */
+        .gic{
+        font-size: 40px;
+        }
+        .gictxt{
+        margin-left: 392px;
+        max-width: 65ch;
+        margin-top: 30px;
+        font-size: 20px;
+        }
+      .gicbtn{
+        width: 200px;
+        margin-top: 50px;
+        font-size: 17px;
+      }
+      .name{
+        user-select: none;
+      }
+        /* GET IN CONTACT */
+    }
+  @media (min-width:1521px) {
+
+    /* PROJECT ITEMS PHOTOS SECTION */
+
+    .pfphotos {
+      max-width: 660px;
+      max-height: 840px;
+    }
+
+    /* PROJECT ITEMS PHOTOS SECTION */
+
+    /* PROJECTS SECTION */
+    .pjtitle {
+      font-size: 50px;
+    }
+
+    .pjtxt {
+      margin-left: 460px;
+      font-size: 22px;
+    }
+
+    /* PROJECTS SECTION */
+    /* PROJECTS */
+    .prjcont1 {
+      margin-left: 25px;
+    }
+
+    /* PROJECTS */
+    /* PROJECT3 */
+    .proj3comp {
+      margin-left: 80px;
+    }
+
+    .p3img {
+      width: 600px;
+      height: 340px;
+      margin-left: 20px;
+    }
+
+    .p3comp {
+      margin-left: 55px;
+    }
+
+    .p3tlt {
+      margin-left: 290px;
+      font-size: 40px;
+
+    }
+
+    /* PROJECT3 */
+          /* GET IN CONTACT */
+          .gic{
+            font-size: 40px;
+            }
+            .gictxt{
+            margin-left: 355px;
+            max-width: 75ch;
+            margin-top: 30px;
+            font-size: 22px;
+            }
+          .gicbtn{
+            width: 220px;
+            margin-top: 50px;
+            font-size: 17px;
+          }
+          .name{
+            user-select: none;
+          }
+            /* GET IN CONTACT */
+  }
+
+/* <REPONSIVENESS> */
+</style>
+<body>
+  <header id="header">
+    <nav>
+      <ul type="none" id="head">
+        <li><a id="headerlink" href="#about">About</a></li>
+        <li><a id="headerlink" href="#work">Work</a></li>
+        <li><a id="headerlink" href="#contact">Contact</a></li>
+        <li id="split"></li>
+        <li>
+          <button id="theme-toggle" class="dark_light">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+              <path
+                d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
+            </svg>
+          </button>
+        </li>
+        <li>
+          <a class="res_bttn btn"
+            href="https://drive.google.com/file/d/1y4lRuT75GGWnwFY47kSke7mG-R9iT2EQ/view?usp=sharing">Resume</a>
+        </li>
+      </ul>
+
+      <!--       <button>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="menubar">
+          <path fill-rule="evenodd"
+            d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+            clip-rule="evenodd" />
+        </svg>
+      </button> -->
+
+    </nav>
+  </header>
+
+
+  <!-- USE THIS IF WE WANT TO USE AN MOBILE NAVIGATION OPTIONS USING JAVA SCRIPT AND USE THE MOBILENAV.JS FILE -->
+  <!-- MOBILE NAV -->
+  <!-- 
+  <div class="mobilenav">
+    <ul type="none" class="mobilehead">
+      <li><a class="mobilenavlinks" href="#about">About</a></li>
+      <li><a class="mobilenavlinks" href="#work">Work</a></li>
+      <li><a class="mobilenavlinks" href="#contact">Contact</a></li>
+      <li class="mobilesplit"></li>
+      <li>
+        <button id="theme-toggle" class="mobiledark_light">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+            <path
+              d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
+          </svg>
+        </button>
+      </li>
+      <li>
+        <a class="mobileres_bttn btn" href="#resume">Resume</a>
+      </li>
+    </ul>
+  </div> -->
+
+  <!-- MOBILE NAV -->
+
+
+
+  <main>
+    <div id="maininfo">
+      <img class="profile" src="https://github.com/srivatsa2005/TrendyFriends/blob/main/sv.png?raw=true">
+      <h2 class="hitxt">Hi, I'm Srivatsa👋</h2>
+      <h1 class="mytitle">FRONT-END<br>WEB DEVELOPER.</h1>
+      <p class="aboutme">A passionate<span style="color: var(--clr-indigo);font-weight: 600;"> Frontend /
+          Fullstack</span> web developer and<span style="color: var(--clr-indigo);font-weight: 600;"> UI/UX
+        </span><br>enthusiast specialized in building stunning pixel-perfect interactive <br>websites/applications.</p>
+      <a href="#contact"><button class="reach btn">Reach Out</button></a>
+    </div>
+  </main>
+  <section id="about">
+    <div class="aboutitms">
+      <h1 class="abtitle">About Me</h1>
+      <p class="abpar">Hi! I'm R Srivatsa, a passionate<span style="color: var(--clr-indigo);font-weight: 600;">
+          Frontend / Fullstack
+          Developer</span> Intern and a dedicated student at Koneru Lakshmaiah University (KLU), pursuing a B.Tech in
+        Electronics and Communication Engineering (ECE) with a specialization in Cybersecurity (Honors Degree). I'm set
+        to graduate in 2026 with a current CGPA of 8.64.</p>
+      <p class="abpar">I enjoy building responsive and dynamic web applications. My technical skills include HTML, CSS,
+        JavaScript,
+        ReactJS, Vanilla JS, and C Programming. I also have hands-on experience with IoT systems, merging software with
+        hardware for smart solutions.</p>
+      <p class="abpar">I'm always eager to learn, grow, and contribute to impactful tech projects. Let's build something
+        amazing!</p>
+      <hr class="splitter">
+      <h2 class="skl">Skills</h2>
+      <div id="sklcnt">
+        <ul class="aboutul" type="none">
+          <li class="abtli">Java Script</li>
+          <li class="abtli">React JS</li>
+          <li class="abtli">HTML</li>
+        </ul>
+        <ul class="aboutul2" type="none">
+          <li class="abtli">CSS 3</li>
+          <li class="abtli">C Programming</li>
+          <li class="abtli">Data Structures (DSA)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="imgwrp">
+      <img class="abimg" alt="abtimg" src="https://github.com/srivatsa2005/TrendyFriends/blob/main/sv.png?raw=true">
+    </div>
+  </section>
+  <section id="fesec">
+    <h3 class="fp">Featured project</h3>
+    <h2 class="pname">RHYNO.EV <a
+      href="https://drive.google.com/drive/folders/16GP5dj9mM3PcKPbXisQJPEu0JGlCeLWV?usp=drive_link"><i style="color: var(--clr-rose);" class="fa-solid fa-link"></i></a></h2>
+    <p class="abproj">Rhyno.ev is a modern, responsive e-commerce website for purchasing electric bikes. Built using
+      React, HTML, CSS, and JavaScript, the platform allows users to explore various EV bike models, view
+      specifications, and place orders. The website features a clean UI, product listings, detailed pages, and a smooth
+      navigation experience, simulating a real-world online store for eco-friendly transportation solutions.</p>
+    <div class="fpele">
+      <div style="margin-bottom: 20px;">
+        <h3 id="ut">TechStack</h3>
+        <ul style="padding: 0;" type="none">
+          <li class="skele">Javascript</li>
+          <li class="skele">React Js</li>
+          <li class="skele">HTML</li>
+          <li class="skele">CSS</li>
+          <li class="skele">Node.Js</li>
+          <li class="skele">Git/Github</li>
+          <li class="skele">Bootstrap</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="projdc">Project Type</h3>
+        <p class="ptype">Fullstack</p>
+      </div>
+      <div>
+        <h3 class="projdc">Project Status</h3>
+        <p class="ptype">Completed June-2024</p>
+      </div>
+    </div>
+    <div class="imagecontainer">
+      <div class="imagewrapper">
+        <img class="pfphotos" src="https://github.com/srivatsa2005/portfolio-photos/blob/main/1.png?raw=true" alt="pf1">
+      </div>
+      <div class="imagewrapper">
+        <img class="pfphotos" src="https://github.com/srivatsa2005/portfolio-photos/blob/main/2.png?raw=true" alt="pf2">
+      </div>
+      <div class="imagewrapper">
+        <img class="pfphotos" src="https://github.com/srivatsa2005/portfolio-photos/blob/main/3.png?raw=true" alt="pf3">
+      </div>
+      <div class="imagewrapper">
+        <img class="pfphotos" src="https://github.com/srivatsa2005/portfolio-photos/blob/main/4.png?raw=true" alt="pf4">
+      </div>
+      <div class="imagewrapper">
+        <img class="pfphotos" src="https://github.com/srivatsa2005/portfolio-photos/blob/main/5.png?raw=true" alt="pf5">
+      </div>
+      <div class="imagewrapper">
+        <img class="pfphotos" src="https://github.com/srivatsa2005/portfolio-photos/blob/main/6.png?raw=true" alt="pf6">
+      </div>
+      <div class="imagewrapper">
+        <img class="pfphotos" src="https://github.com/srivatsa2005/portfolio-photos/blob/main/7.png?raw=true" alt="pf7">
+      </div>
+      <div class="imagewrapper">
+        <img class="pfphotos" src="https://github.com/srivatsa2005/portfolio-photos/blob/main/8.png?raw=true" alt="pf8">
+      </div>
+    </div>
+  </section>
+  <section id="work" class="pjconatiner">
+    <h2 class="pjtitle">Projects</h2>
+    <p class="pjtxt">Ive built a range of creative web projects, from interactive pages to dynamic applications,
+      focusing on smooth
+      user experiences and engaging designs.</p>
+  </section>
+  <section class="projcontainer">
+    <!-- PROJ1 -->
+    <div class="prjcont1">
+      <img class="p1img" src="https://github.com/srivatsa2005/portfolio-photos/blob/main/A.png?raw=true" alt="AIRBNB">
+      <div class="projcomp">
+        <h3 class="p1tlt">AIRBNB REPLICA</h3>
+        <p class="p1txt1">Designd an Replica of the AIRBNB Website with all elemnts same as the original web page</p>
+        <p class="p1txt2">This project accurately mimics the layout, design elements, and responsiveness of the original
+          site, including
+          the navigation bar, search functionality, featured listings, and clean aesthetic. It showcases my skills in
+          HTML,
+          CSS, and JavaScript, and reflects my attention to detail and ability to recreate complex UI designs.</p>
+        <a href="https://srivatsa2005.github.io/AIRBNBWEBSITE/"><button class="webbtn">Webpage</button></a>
+      </div>
+    </div>
+    <!-- PROJ1 -->
+    <!-- PROJ3 -->
+    <div class="proj3comp">
+      <div>
+        <img class="p3img" src="https://github.com/srivatsa2005/portfolio-photos/blob/main/B.png?raw=true"
+          alt="nextgen">
+      </div>
+      <div class="p3comp">
+        <h3 class="p3tlt">NextGen</h3>
+        <p class="p3txt1">Designd an Sample Webpage of NextGen Website with all elemnts that need for Simple Responsive
+          web page</p>
+        <p class="p3txt2">This project accurately mimics the layout, design elements, and responsiveness of the original
+          site, including
+          the navigation bar, search functionality, featured listings, and clean aesthetic. It showcases my skills in
+          HTML,
+          CSS, and JavaScript, and reflects my attention to detail and ability to recreate complex UI designs.</p>
+        <a href="https://srivatsa2005.github.io/nextgen/"><button class="p3btn">Webpage</button></a>
+      </div>
+    </div>
+    <!-- PROJ3 -->
+    <!-- PROJ2 -->
+    <div class="prjcont1">
+      <img class="p1img" src="https://github.com/srivatsa2005/portfolio-photos/blob/main/C.png?raw=true" alt="AIRBNB">
+      <div class="projcomp">
+        <h3 class="p1tlt">TRENDY FRIENDS</h3>
+        <p class="p1txt1">Designd an E-commerce store of Trendy Friends Website with all elemnts that need for online
+          store web page</p>
+        <p class="p1txt2">This project accurately mimics the layout, design elements, and responsiveness of the original
+          site, including
+          the navigation bar, search functionality, featured listings, and clean aesthetic. It showcases my skills in
+          HTML,
+          CSS, and JavaScript, and reflects my attention to detail and ability to recreate complex UI designs.</p>
+        <a href="https://srivatsa2005.github.io/TFPAGE/"><button class="webbtn">Webpage</button></a>
+      </div>
+    </div>
+    <!-- PROJ2 -->
+  </section>
+  <section id="contact">
+    <div class="giccontainer">
+      <h2 class="gic">Get In Contact</h2>
+      <p class="gictxt">Feel free to reach out if you have any questions, opportunities, or just want to connect. I’m
+        always open to new
+        ideas and collaborations. Let’s build something great together!</p>
+      <a href="mailto:2200040066ece@gmail.com" target="_blank"><button class="gicbtn">Reach Out</button></a>
+      <p class="name">~SRI VATSA~</p>
+    </div>
+  </section>
+  <script type="module" src="/src/main.js">
+    const toggleButton = document.getElementById('theme-toggle');
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+
+</html>
